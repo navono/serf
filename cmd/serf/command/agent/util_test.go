@@ -35,6 +35,8 @@ func testAgentWithConfig(t *testing.T, ip net.IP, agentConfig *Config, serfConfi
 	serfConfig.MemberlistConfig.BindAddr = ip.String()
 	serfConfig.NodeName = serfConfig.MemberlistConfig.BindAddr
 
+	serfConfig.MemberlistConfig.RequireNodeNames = true
+
 	if logOutput == nil {
 		logOutput = testutil.TestWriter(t)
 	}
