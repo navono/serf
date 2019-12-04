@@ -2,7 +2,8 @@ module github.com/hashicorp/serf
 
 go 1.12
 
-replace github.com/hashicorp/memberlist => ../memberlist
+// NOTE memberlist points to the wan-mgw branch
+// replace github.com/hashicorp/memberlist => ../memberlist
 
 require (
 	github.com/armon/circbuf v0.0.0-20150827004946-bbbad097214e
